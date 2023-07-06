@@ -11,9 +11,8 @@ function App() {
     <div className="App">
       hello
       {/* <Header /> */}
-      {/* <Movies movies={movies}/> */}
-      <SelectedMovie  selectedMovie={selectedMovie}/>
-      {/* className='hidden' */}
+      <Movies className='Movies' movies={movies}/>
+      {/* <SelectedMovie  selectedMovie={selectedMovie}/> */}
     </div>
   );
 }
