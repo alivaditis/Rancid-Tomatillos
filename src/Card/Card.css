@@ -13,6 +13,11 @@
   background-size: cover;
 }
 
+.tomato {
+  width: 16px;
+  height:100%;
+}
+
 .rating {
   display: flex;
 }
