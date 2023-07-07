@@ -6,19 +6,27 @@ import tomato from '../imgs/tomato.png'
 function Card({id, posterSrc, rating, releaseDate, title, setSelectedMovie, movies}){
   const updateSelectedMovie = (event) => {
     console.log(event.target.id)
-    setSelectedMovie(movies.find(movie => movie.id === parseInt(event.target.id)))
+    setSelectedMovie(movies.find(movie => movie.id === parseInt(event.target.id || event.target.parentNode.id || event.target.parentNode.parentNode.id)))
   } 
   
   return (
     <div
       className='card'
-      
-    >
-      <div className='poster' style={{ backgroundImage: `url(${posterSrc})` }}></div>
-      <section className='rating'>
-        <img className='tomato' src={rating < 6 ? slime : tomato}/> {Math.floor(rating*10)}%
-      </section>
-      <p className="title" id={id} onClick={updateSelectedMovie}>{title} </p>
+      id={id}
+      onClick={updateSelectedMovie}
+      >
+      <div 
+        className='poster' 
+        style={{ backgroundImage: `url(${posterSrc})` }}
+        onClick={updateSelectedMovie}>
+      </div>
+      <div className='wrap'>
+        <section className='rating'>
+          <img className='tomato' src={rating < 6 ? slime : tomato} onClick={updateSelectedMovie}/> 
+          <span>{Math.floor(rating*10)}%</span>
+        </section>
+        <p className="title" onClick={updateSelectedMovie}>{title} </p>
+      </div>
     </div>
   )
 }
