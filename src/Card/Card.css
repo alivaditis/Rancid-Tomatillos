@@ -1,9 +1,14 @@
 .card {
   width: 180px;
   height: 340px;
-  background-color: red;
   display: flex;
   flex-direction: column;
+  font-family: Roboto, sans-serif;
+}
+
+.card :hover {
+  color: blue;
+  cursor: pointer;
 }
 
 .poster {
@@ -14,11 +19,13 @@
 }
 
 .tomato {
+  margin-right: 6px;
   width: 16px;
   height:100%;
 }
 
 .rating {
+  margin-top: 4px;
   display: flex;
 }
 
