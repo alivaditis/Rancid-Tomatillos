@@ -1,6 +1,7 @@
 .app {
   align-self: center;
   font-family: Roboto, sans-serif;
+  width: 980px;
 }
 
 header {
