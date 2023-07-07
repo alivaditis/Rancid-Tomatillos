@@ -2,13 +2,13 @@ import {useState, useEffect} from 'react'
 import Movies from '../Movies/Movies'
 import Header from '../Header/Header'
 import SelectedMovie from '../SelectedMovie/SelectedMovie';
-import getAllMovies from '../../api';
+import {getAllMovies} from '../../api';
 import movieData from '../../dummy';
 import './App.css';
 
 function App() {
   const [movies, setMovies] = useState([])
-  const [selectedMovie, setSelectedMovie] = useState(movies[0])
+  const [selectedMovie, setSelectedMovie] = useState(null)
   const [serverError, setServerError] = useState(false)
 
   useEffect( () => {

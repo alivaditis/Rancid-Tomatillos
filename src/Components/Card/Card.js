@@ -1,13 +1,16 @@
 import React from "react";
+import useEffect from 'react'
+import {getMovie} from '../../api'
 import './Card.css'
 import slime from '../../imgs/green-slime.png'
 import tomato from '../../imgs/tomato.png'
 
-function Card({id, posterSrc, rating, releaseDate, title, setSelectedMovie, movies}){
+function Card({id, posterSrc, rating, releaseDate, title, setSelectedMovie, movies}) {
+
   const updateSelectedMovie = (event) => {
-    console.log(event.target.id)
-    setSelectedMovie(movies.find(movie => movie.id === parseInt(event.target.id || event.target.parentNode.id || event.target.parentNode.parentNode.id)))
-  } 
+      getMovie(event.target.id || event.target.parentNode.id || event.target.parentNode.parentNode.id)
+        .then(data => console.log(data))
+    }
   
   return (
     <div
