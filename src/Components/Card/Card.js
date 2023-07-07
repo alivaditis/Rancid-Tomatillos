@@ -3,8 +3,9 @@ import './Card.css'
 import slime from '../../imgs/green-slime.png'
 import tomato from '../../imgs/tomato.png'
 
-function Card({id, posterSrc, rating, releaseDate, title, setSelectedMovie, movies}){
+function Card({id, posterSrc, rating, releaseDate, title, setSelectedMovie, movies, setMovieView}){
   const updateSelectedMovie = (event) => {
+    setMovieView(true)
     console.log(event.target.id)
     setSelectedMovie(movies.find(movie => movie.id === parseInt(event.target.id || event.target.parentNode.id || event.target.parentNode.parentNode.id)))
   } 
