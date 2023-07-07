@@ -3,6 +3,7 @@ import './SelectedMovie.css'
 
 
 function SelectedMovie({selectedMovie}){
+  
   console.log(selectedMovie.title)
   return (
   <div className='selectedMovie'>
