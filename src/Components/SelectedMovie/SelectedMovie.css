@@ -1,0 +1,16 @@
+
+.selectedTitle {
+  font-size: 4em;
+  color: white;
+  margin-top: -50%;
+  margin-bottom: auto;
+}
+
+.selectedReleaseDate {
+  font-size: 2em;
+  color: white;
+}
+
+.selectedimg {
+  width: 80vw;
+}

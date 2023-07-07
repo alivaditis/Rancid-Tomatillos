@@ -5,11 +5,12 @@ import './Card.css'
 import slime from '../../imgs/green-slime.png'
 import tomato from '../../imgs/tomato.png'
 
-function Card({id, posterSrc, rating, releaseDate, title, setSelectedMovie, movies}) {
+function Card({id, posterSrc, rating, releaseDate, title, setSelectedMovie, setMovieView}) {
 
   const updateSelectedMovie = (event) => {
-      getMovie(event.target.id || event.target.parentNode.id || event.target.parentNode.parentNode.id)
-        .then(data => console.log(data))
+    setMovieView(true)
+    getMovie(event.target.id || event.target.parentNode.id || event.target.parentNode.parentNode.id)
+      .then(data => setSelectedMovie(data))
     }
   
   return (

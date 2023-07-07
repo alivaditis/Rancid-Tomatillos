@@ -8,7 +8,8 @@ import './App.css';
 
 function App() {
   const [movies, setMovies] = useState([])
-  const [selectedMovie, setSelectedMovie] = useState(null)
+  const [selectedMovie, setSelectedMovie] = useState({})
+  const [movieView, setMovieView] = useState(false)
   const [serverError, setServerError] = useState(false)
 
   useEffect( () => {
@@ -26,10 +27,10 @@ function App() {
       <div className="app">
         <Header/>
         {serverError && <p style={{backgroundColor: 'white', margin: 0, padding: '24px'}}>Sorry!  The server is down!</p>} 
-        <Movies className='Movies' movies={movies} setSelectedMovie={setSelectedMovie}/>
-        {/* <SelectedMovie  selectedMovie={selectedMovie}/> */}
+        {!movieView && <Movies className='Movies' movies={movies} setSelectedMovie={setSelectedMovie} setMovieView={setMovieView}/>}
+        {movieView && <SelectedMovie  selectedMovie={selectedMovie}/>}
       </div>
   );
 }
 
-export default App;
+export default App
