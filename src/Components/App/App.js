@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import Movies from '../Movies/Movies'
 import Header from '../Header/Header'
 import SelectedMovie from '../SelectedMovie/SelectedMovie';
+import getAllMovies from '../../api';
 import movieData from '../../dummy';
 import './App.css';
 
@@ -10,8 +11,7 @@ function App() {
   const [selectedMovie, setSelectedMovie] = useState(movies[0])
   
   useEffect( () => {
-     fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
-      .then(response => response.json())
+    getAllMovies()
       .then(data => setMovies(data.movies))
     }, [])
 
