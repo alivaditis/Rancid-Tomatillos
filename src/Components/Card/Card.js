@@ -1,7 +1,7 @@
 import React from "react";
 import './Card.css'
-import slime from '../imgs/green-slime.png'
-import tomato from '../imgs/tomato.png'
+import slime from '../../imgs/green-slime.png'
+import tomato from '../../imgs/tomato.png'
 
 function Card({id, posterSrc, rating, releaseDate, title, setSelectedMovie, movies}){
   const updateSelectedMovie = (event) => {

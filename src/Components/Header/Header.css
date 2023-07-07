@@ -1,0 +1,41 @@
+
+.rt-logo {
+  height: 60px;
+  width: auto;
+  padding: 14px;
+}
+
+.rt-logo:hover {
+  cursor: pointer;
+}
+
+nav {
+  padding: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.all-movies-link {
+  margin-right: 12px;
+  text-decoration: none;
+}
+
+.all-movies-link:hover {
+  cursor:pointer;
+}
+
+.user-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.user-wrap:hover, user-wrap *:hover {
+  cursor: pointer;
+}
+
+.login-img {
+  height:auto;
+  width: 28px;
+  margin-right: 8px;
+  filter: invert(100%);;
+}

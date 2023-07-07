@@ -1,0 +1,13 @@
+.app {
+  align-self: center;
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
