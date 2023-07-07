@@ -6,13 +6,13 @@ import './App.css';
 
 function App() {
   const [movies, setMovies] = useState(movieData.movies)
-  const [selectedMovie, setSelectedMovie] = useState(movies[0])
+  const [selectedMovie, setSelectedMovie] = useState('')
   return (
     <div className="app">
       hello
       {/* <Header /> */}
       <Movies className='Movies' movies={movies} setSelectedMovie={setSelectedMovie}/>
-      {/* <SelectedMovie  selectedMovie={selectedMovie}/> */}
+      <SelectedMovie selectedMovie={selectedMovie} />
     </div>
   );
 }

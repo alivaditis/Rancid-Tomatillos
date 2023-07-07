@@ -12,13 +12,12 @@ function Card({id, posterSrc, rating, releaseDate, title, setSelectedMovie, movi
   return (
     <div
       className='card'
-      
     >
       <div className='poster' style={{ backgroundImage: `url(${posterSrc})` }}></div>
       <section className='rating'>
         <img className='tomato' src={rating < 6 ? slime : tomato}/> {Math.floor(rating*10)}%
       </section>
-      <p className="title" id={id} onClick={updateSelectedMovie}>{title} </p>
+      <p className="title" id={id} onClick={updateSelectedMovie}>{title}</p>
     </div>
   )
 }
