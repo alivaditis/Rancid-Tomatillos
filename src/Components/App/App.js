@@ -13,7 +13,7 @@ function App() {
     <div className="app">
       <Header/>
       {!movieView && <Movies className='Movies' movies={movies} setSelectedMovie={setSelectedMovie} setMovieView={setMovieView}/>}
-      {movieView && <SelectedMovie  selectedMovie={selectedMovie}/>}
+      {movieView && <SelectedMovie  selectedMovie={selectedMovie} setMovieView={setMovieView}/>}
     </div>
   );
 }

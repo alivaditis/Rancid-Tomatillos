@@ -1,16 +1,27 @@
-
+.selectedMovie {
+  width: 80vw;
+  background-size: 80vw;
+  height: 80vh;
+  background-repeat: no-repeat;
+}
 .selectedTitle {
   font-size: 4em;
-  color: white;
-  margin-top: -50%;
-  margin-bottom: auto;
+  color: rgb(255, 0, 0);
+  margin: 0%
 }
 
 .selectedReleaseDate {
-  font-size: 2em;
-  color: white;
+  font-size: 1em;
+  color: rgb(255, 0, 0);
+  margin: 0%
 }
 
-.selectedimg {
-  width: 80vw;
+.backButton {
+  color: white;
+  background-color: black;
+  margin-top: 1em;
+  border-radius: 1em;
+  padding: .4em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
