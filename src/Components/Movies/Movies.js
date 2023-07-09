@@ -2,7 +2,7 @@ import React from "react";
 import Card from '../Card/Card'
 import './Movies.css'
 
-function Movies({movies, setSelectedMovie, setMovieView}) {
+function Movies({movies, updateSelectedMovie, setMovieView}) {
   
   const movieCards = movies.map(movie => {
     return <Card
@@ -13,7 +13,7 @@ function Movies({movies, setSelectedMovie, setMovieView}) {
         releaseDate={movie.release_date}
         title={movie.title}
         movies={movies}
-        setSelectedMovie={setSelectedMovie}
+        updateSelectedMovie={updateSelectedMovie}
         setMovieView={setMovieView}
       />
   })
