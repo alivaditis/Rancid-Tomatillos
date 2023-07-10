@@ -24,7 +24,7 @@ function SelectedMovie({selectedMovie, setMovieView, setSelectedMovie}){
         <h3 className='selectedTitle'>{selectedMovie.title}</h3>
         <p>
           <span>{selectedMovie.release_date.slice(0,4)}, </span>
-          <span>{selectedMovie.genres.join('/')}, </span>
+          <span>{selectedMovie.genres.join(' / ')}, </span>
           <span>{Math.floor(selectedMovie.runtime/60)}h {selectedMovie.runtime % 60}m</span>
         </p>
         <div class='rating-container'>
