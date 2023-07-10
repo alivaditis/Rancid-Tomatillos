@@ -20,4 +20,11 @@ function getMovie(id) {
   .catch(err => console.log(err))
 }
 
-export { getAllMovies, getMovie}
+function getTrailerKey(id) {
+  return fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)
+    .then(res => res.json())
+    .then(data => data.videos.length ? data.videos.find(video => video.type === 'Trailer') : '')
+    .then(video => video.key ? video.key : '')
+}
+
+export { getAllMovies, getMovie, getTrailerKey}

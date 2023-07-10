@@ -1,13 +1,23 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import slime from '../../imgs/green-slime.png'
 import tomato from '../../imgs/tomato.png'
+import {getTrailerKey} from '../../api'
 import './SelectedMovie.css'
 
 function SelectedMovie({selectedMovie, setMovieView, setSelectedMovie}){
 
+  const [trailerKey, setTrailerKey] = useState('')
+
+  useEffect(() => {
+    getTrailerKey(selectedMovie.id)
+      .then(key => setTrailerKey(key))
+  }, [])
+
   return (
   <div className='selectedMovie'>
-    <img className='backdrop' src={selectedMovie.backdrop_path}/>
+    {trailerKey && <iframe className='trailer' src= {`https://www.youtube.com/embed/${trailerKey}`}></iframe>}
+    {!trailerKey && <img className='backdrop' src={selectedMovie.backdrop_path}/>}
     <div className='container'>
       <img className='selectedPoster' src={selectedMovie.poster_path}/>
       <div className='information'>
