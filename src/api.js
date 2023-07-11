@@ -22,9 +22,15 @@ function getMovie(id) {
 
 function getTrailerKey(id) {
   return fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)
-    .then(res => res.json())
-    .then(data => data.videos.length ? data.videos.find(video => video.type === 'Trailer') : '')
-    .then(video => video.key ? video.key : '')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Trailer not found.')
+    }
+    return response.json()
+  })    
+  .then(data => data.videos.length ? data.videos.find(video => video.type === 'Trailer') : '')
+  .then(video => video.key ? video.key : '')
+  .catch(err => console.log(err))
 }
 
 export { getAllMovies, getMovie, getTrailerKey}

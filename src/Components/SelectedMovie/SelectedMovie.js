@@ -27,7 +27,7 @@ function SelectedMovie({selectedMovie, setMovieView, setSelectedMovie}){
           <span>{selectedMovie.genres.join(' / ')}, </span>
           <span>{Math.floor(selectedMovie.runtime/60)}h {selectedMovie.runtime % 60}m</span>
         </p>
-        <div class='rating-container'>
+        <div className='rating-container'>
           <img className='rating-img' src={selectedMovie.average_rating < 6 ? slime : tomato} />
           <span className='percentage'>{Math.floor(selectedMovie.average_rating*10)}%</span>
         </div>
