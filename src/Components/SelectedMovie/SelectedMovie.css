@@ -1,27 +1,78 @@
 .selectedMovie {
-  width: 80vw;
-  background-size: 80vw;
-  height: 80vh;
-  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 95vh;
+  background-color: white;
+  color: black
 }
+
+.backdrop {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  margin: 48px;
+}
+
+.selectedPoster {
+  width: 155px;
+  height: 222px;
+  margin-right: 42px;
+  border-radius: 10px;
+}
+
+.information {
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  height: 222px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.rating-container {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.rating-img {
+  width: 40px;
+  height: auto;
+  margin-right: 4px;
+}
+
+.percentage {
+  font-size: 30px;
+}
+
 .selectedTitle {
-  font-size: 4em;
-  color: rgb(255, 0, 0);
+  font-size: 32px;
   margin: 0%
 }
 
-.selectedReleaseDate {
-  font-size: 1em;
-  color: rgb(255, 0, 0);
-  margin: 0%
+.overview {
+  margin: 48px;
+  font-size: 1.2em;
 }
 
 .backButton {
   color: white;
   background-color: black;
-  margin-top: 1em;
+  margin: 48px;
+  margin-top: 24px;
+  margin-bottom: 24px;
   border-radius: 1em;
   padding: .4em;
   padding-left: 1em;
   padding-right: 1em;
+}
+
+.backButton:hover {
+  cursor: pointer;
 }
