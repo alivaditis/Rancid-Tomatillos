@@ -6,7 +6,6 @@ function getAllMovies() {
       }
       return response.json()
     })
-    .catch(err => console.log(err))
 }
 
 function getMovie(id) {
@@ -17,7 +16,6 @@ function getMovie(id) {
     }
     return response.json()
   })
-  .catch(err => console.log(err))
 }
 
 function getTrailerKey(id) {
@@ -30,7 +28,6 @@ function getTrailerKey(id) {
   })    
   .then(data => data.videos.length ? data.videos.find(video => video.type === 'Trailer') : '')
   .then(video => video.key ? video.key : '')
-  .catch(err => console.log(err))
 }
 
 export { getAllMovies, getMovie, getTrailerKey}

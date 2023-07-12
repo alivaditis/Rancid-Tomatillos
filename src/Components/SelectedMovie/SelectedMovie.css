@@ -1,6 +1,6 @@
 .selectedMovie {
   width: 100%;
-  min-height: 95vh;
+  min-height: 96vh;
   background-color: white;
   color: black
 }
@@ -64,21 +64,7 @@
 
 .overview {
   margin: 48px;
+  margin-bottom: 0;
   font-size: 1.2em;
-}
-
-.backButton {
-  color: white;
-  background-color: black;
-  margin: 48px;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  border-radius: 1em;
-  padding: .4em;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-.backButton:hover {
-  cursor: pointer;
+  padding-bottom: 96px;
 }

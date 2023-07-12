@@ -9,8 +9,6 @@ import { Routes, Route } from 'react-router-dom';
 
 function App() {
   let [movies, setMovies] = useState([])
- 
-  // const [movieView, setMovieView] = useState(false)
   const [serverError, setServerError] = useState(false)
 
   useEffect( () => {
@@ -22,24 +20,13 @@ function App() {
           setMovies(data.movies)
         }
       })
+      .catch(err => setServerError(err.message))
     }, [])
-    
-  // const updateSelectedMovie = (event) => {
-  //   getMovie(event.target.id || event.target.parentNode.id || event.target.parentNode.parentNode.id)
-  //   .then(data => {
-  //     if (!data) {
-  //       setServerError(true)
-  //     } else {
-  //       setSelectedMovie(data.movie)
-  //     }
-  //   })
-  //   .then(x => setMovieView(true))
-  // }
 
   return (
       <div className="app">
         <Header/>
-        {serverError && <p style={{backgroundColor: 'white', margin: 0, padding: '24px'}}>Sorry!  The server is down!</p>} 
+        {serverError && <p style={{backgroundColor: 'white', margin: 0, padding: '24px'}}>{serverError}</p>} 
         <Routes>
           <Route path='/' element={<Movies className='Movies' movies={movies} />}/>
           <Route path='/:movieId' element={<SelectedMovie />}/>
