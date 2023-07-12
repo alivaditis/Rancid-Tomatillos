@@ -1,12 +1,10 @@
 import React from "react";
-import useEffect from 'react'
-import {getMovie} from '../../api'
 import './Card.css'
 import slime from '../../imgs/green-slime.png'
 import tomato from '../../imgs/tomato.png'
 import { Link } from 'react-router-dom';
 
-function Card({id, posterSrc, rating, title, updateSelectedMovie}) {
+function Card({id, posterSrc, rating, title}) {
 
  
   

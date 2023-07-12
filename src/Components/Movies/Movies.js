@@ -1,9 +1,12 @@
 import React from "react";
+import { useEffect } from "react";
 import Card from '../Card/Card'
 import './Movies.css'
 
-function Movies({movies, updateSelectedMovie, setMovieView}) {
+function Movies({movies, updateSelectedMovie, setMovieView, setServerError}) {
   
+  useEffect(() => setServerError(false), [])
+
   const movieCards = movies.map(movie => {
     return <Card
         key={movie.id}
