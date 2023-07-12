@@ -42,7 +42,7 @@ function App() {
         {serverError && <p style={{backgroundColor: 'white', margin: 0, padding: '24px'}}>Sorry!  The server is down!</p>} 
         <Routes>
           <Route path='/' element={<Movies className='Movies' movies={movies} />}/>
-          <Route path='/:id' element={<SelectedMovie />}/>
+          <Route path='/:movieId' element={<SelectedMovie />}/>
         </Routes>
       </div>
   );

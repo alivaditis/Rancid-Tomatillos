@@ -11,7 +11,7 @@ function Card({id, posterSrc, rating, title, updateSelectedMovie}) {
  
   
   return (
-    <Link to={`/${id}`}>
+    <Link className='card--link' to={`/${id}`}>
       <div
         className='card'
         id={id}
