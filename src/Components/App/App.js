@@ -13,7 +13,9 @@ function App() {
   
   useEffect( () => {
     getAllMovies() 
-      .then(data => setMovies(data.movies))
+      .then(data => {
+        return setMovies(data.movies)
+      })
       .catch(err => setServerError(err.message))
     }, [])
 

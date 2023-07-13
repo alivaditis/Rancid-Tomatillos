@@ -7,7 +7,7 @@ import './SelectedMovie.css'
 import { useParams } from 'react-router-dom'
 
 function SelectedMovie({setServerError}){
-  const [selectedMovie, setSelectedMovie] = useState(null)
+  const [selectedMovie, setSelectedMovie] = useState(false)
   const [trailerKey, setTrailerKey] = useState('')
   const {movieId} = useParams()
 
@@ -20,7 +20,6 @@ function SelectedMovie({setServerError}){
     useEffect( () => {  
       getTrailerKey(movieId)
         .then(key => setTrailerKey(key))
-        .catch(err => setServerError(err.message))
     }, [])
 
 
