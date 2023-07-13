@@ -1,6 +1,6 @@
 import movieData from "../../src/dummy"
 
-describe('Home Page', () => {
+describe('Movie Page', () => {
   beforeEach(()=>{
     // visit localhost
     cy.visit('http://localhost:3000/694919')
@@ -42,7 +42,7 @@ describe('Home Page', () => {
       }  
     })
   })
-it('user sees a header, the home/logo button, and 40 movie cards when they visit the home page', () => {
+it('user sees video, details containing rating, release date, genre, run time, and overview.', () => {
   expect(true).to.equal(true)
   cy.get('.information').contains('h3','Money Plane')
   .get('header').should('be.visible')
@@ -54,4 +54,10 @@ it('user sees a header, the home/logo button, and 40 movie cards when they visit
   .get('.overview').contains('p', `It's the money plane!!!!`)
   .get('.trailer').should('have.attr', 'src').should('include', 'https://www.youtube.com/embed/aETz_dRDEys')
 })
+
+it('as a user I should be able to click on the home button and the changes to the url should be reflected', () => {
+  cy.get('.rt-logo').click()
+  .url().should('eq', 'http://localhost:3000/')
+});
+
 })
