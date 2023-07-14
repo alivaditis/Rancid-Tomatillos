@@ -28,7 +28,9 @@ function SelectedMovie({setServerError}){
     <div>
       {selectedMovie &&
       <div className='selectedMovie'>
-      {trailerKey && <iframe className='trailer' src= {`https://www.youtube.com/embed/${trailerKey}`}></iframe>}
+      {trailerKey && <div className='video-container'>
+          <iframe className='trailer' src= {`https://www.youtube.com/embed/${trailerKey}`}></iframe>
+        </div>}
       {!trailerKey && <img className='backdrop' src={selectedMovie.backdrop_path}/>}
       <div className='container'>
         <img className='selectedPoster' src={selectedMovie.poster_path}/>
@@ -37,7 +39,7 @@ function SelectedMovie({setServerError}){
           <p>
             <span>{selectedMovie.release_date.slice(0,4)}, </span>
             <span>{selectedMovie.genres.join(' / ')}, </span>
-            <span>{Math.floor(selectedMovie.runtime/60)}h {selectedMovie.runtime % 60}m</span>
+            <span>{Math.floor(selectedMovie.runtime/60)}h {selectedMovie.runtime % 60 > 0 ? (selectedMovie.runtime % 60) + 'm': ''}</span>
           </p>
           <div className='rating-container'>
             <img className='rating-img' src={selectedMovie.average_rating < 6 ? slime : tomato} />

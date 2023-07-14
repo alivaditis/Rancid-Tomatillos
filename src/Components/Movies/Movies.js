@@ -18,9 +18,11 @@ function Movies({movies, setServerError}) {
       />
   })
   return(
-    <section className="Movies">
-      {movieCards}
-    </section>
+    <div className='grid-container'>
+      <section className="Movies">
+        {movieCards}
+      </section>
+    </div>
   )
 }
 

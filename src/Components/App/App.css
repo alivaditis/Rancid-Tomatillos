@@ -12,3 +12,41 @@ header {
   background-color: black;
   color: white;
 }
+
+@media screen and (max-width: 1000px) {
+  .app {
+    width: 100vw;
+  }
+
+  .grid-container {
+    width: 100vw;
+  }
+
+  .Movies {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .Movies {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Movies {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 24px;
+  }
+
+  .information {
+    font-size: 12px;
+  }
+
+  .selectedTitle {
+    font-size: 16px;
+  }
+
+
+}
