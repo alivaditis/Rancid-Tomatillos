@@ -21,8 +21,8 @@ function SelectedMovie({setServerError}){
     useEffect( () => {  
       getTrailerKey(movieId)
         .then(key => setTrailerKey(key))
+        .catch(e => setTrailerKey(''))
     }, [])
-
 
   return (
     <div>
