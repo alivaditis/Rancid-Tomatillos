@@ -1,0 +1,6 @@
+.serverError {
+  font-size: 2em;
+  padding: 24px;
+  background-color: white;
+  min-height: 90vh;
+}
