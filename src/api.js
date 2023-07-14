@@ -26,8 +26,8 @@ function getTrailerKey(id) {
     }
     return response.json()
   })    
-  .then(data => data.videos.length ? data.videos.find(video => video.type === 'Trailer') : '')
-  .then(video => video.key ? video.key : '')
+  .then(data => data.videos.find(video => video.type === 'Trailer'))
+  .then(video => video.key)
 }
 
 export { getAllMovies, getMovie, getTrailerKey}

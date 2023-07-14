@@ -42,6 +42,19 @@ describe('Home Page', () => {
       }  
     })
   })
+  
+  it('as a user, if the network request fails, I should see a message on the page letting me know.', () => {
+    
+    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
+      statusCode: 401,
+      ok: false,
+      statusText: "Not Found"
+    })
+
+    cy.get('.serverError').contains('p', 'Movies not found.')
+
+  });
+  
   it('user sees a header, the home/logo button, and 40 movie cards when they visit the home page', () => {
     expect(true).to.equal(true)
     cy.get('header').should('be.visible')
@@ -71,4 +84,5 @@ describe('Home Page', () => {
     cy.get('.rt-logo').click()
     .url().should('eq', 'http://localhost:3000/')
   });
-})  
+
+});  
