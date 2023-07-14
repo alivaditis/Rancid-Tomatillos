@@ -2,7 +2,7 @@
 .rt-logo {
   height: 60px;
   width: auto;
-  padding: 14px;
+  padding: 24px;
 }
 
 .rt-logo:hover {
@@ -10,18 +10,9 @@
 }
 
 nav {
-  padding: 14px;
+  padding: 24px;
   display: flex;
   align-items: center;
-}
-
-.all-movies-link {
-  margin-right: 12px;
-  text-decoration: none;
-}
-
-.all-movies-link:hover {
-  cursor:pointer;
 }
 
 .user-wrap {
@@ -37,5 +28,5 @@ nav {
   height:auto;
   width: 28px;
   margin-right: 8px;
-  filter: invert(100%);;
+  filter: invert(100%);
 }

@@ -1,3 +1,9 @@
+.grid-container {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
 .Movies {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
