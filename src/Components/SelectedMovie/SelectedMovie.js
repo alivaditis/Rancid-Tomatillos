@@ -5,6 +5,7 @@ import tomato from '../../imgs/tomato.png'
 import {getTrailerKey, getMovie} from '../../api'
 import './SelectedMovie.css'
 import { useParams } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 function SelectedMovie({setServerError}){
   const [selectedMovie, setSelectedMovie] = useState(false)
@@ -52,3 +53,7 @@ function SelectedMovie({setServerError}){
 }
 
 export default SelectedMovie
+
+SelectedMovie.propTypes = {
+  setServerError: PropTypes.func.isRequired
+};
