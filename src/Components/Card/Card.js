@@ -3,6 +3,7 @@ import './Card.css'
 import slime from '../../imgs/green-slime.png'
 import tomato from '../../imgs/tomato.png'
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function Card({id, posterSrc, rating, title}) {
 
@@ -30,3 +31,10 @@ function Card({id, posterSrc, rating, title}) {
 }
 
 export default Card
+
+Card.propTypes = {
+  id: PropTypes.number.isRequired,
+  posterSrc: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+};

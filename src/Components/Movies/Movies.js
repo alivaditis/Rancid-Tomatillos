@@ -2,8 +2,9 @@ import React from "react";
 import { useEffect } from "react";
 import Card from '../Card/Card'
 import './Movies.css'
+import PropTypes from 'prop-types';
 
-function Movies({movies, updateSelectedMovie, setMovieView, setServerError}) {
+function Movies({movies, setServerError}) {
   
   useEffect(() => setServerError(false), [])
 
@@ -13,11 +14,7 @@ function Movies({movies, updateSelectedMovie, setMovieView, setServerError}) {
         id={movie.id}
         posterSrc={movie.poster_path}
         rating={movie.average_rating}
-        releaseDate={movie.release_date}
         title={movie.title}
-        movies={movies}
-        updateSelectedMovie={updateSelectedMovie}
-        setMovieView={setMovieView}
       />
   })
   return(
@@ -28,3 +25,15 @@ function Movies({movies, updateSelectedMovie, setMovieView, setServerError}) {
 }
 
 export default Movies
+
+Movies.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      average_rating: PropTypes.number.isRequired,
+      poster_path: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired
+    })
+  ).isRequired,
+  setServerError: PropTypes.func.isRequired
+};
