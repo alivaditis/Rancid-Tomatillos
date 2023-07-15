@@ -1,5 +1,6 @@
 import React from 'react'
 import './ServerError.css'
+import PropTypes from 'prop-types'
 
 function ServerError ({ serverError }) {
   return (
@@ -10,3 +11,7 @@ function ServerError ({ serverError }) {
 }
 
 export default ServerError
+
+ServerError.propTypes = {
+  serverError: PropTypes.string.isRequired
+};
