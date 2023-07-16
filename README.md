@@ -3,7 +3,7 @@
 [Deployed Project](https://rancid-tomatillos-gules.vercel.app/) 
 
 ## Description
-Rancid Tomatillos is a website that uses the fetch API to display details about a movie.  On the home page, there is a list of movies with their corresponding ratings.  A user can click on a movie to view more details of the movie, such as release date, genres, runtime, a trailer, and an overview.
+Rancid Tomatillos is a website that uses the fetch API to display details about movies.  On the home page, there is a list of movies with their corresponding ratings.  A user can click on a movie to view more details of the movie, such as release date, genres, runtime, a trailer, and an overview.
 
 ## Learning Goals
 - Gain competency with React fundamentals
@@ -35,7 +35,7 @@ Rancid Tomatillos is a website that uses the fetch API to display details about 
 
 ## Technologies Used
 - React
-- Browser-Router
+- Router
 - JavaScript (ES6)
 - CSS
 - HTML
