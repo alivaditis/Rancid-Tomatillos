@@ -16,9 +16,9 @@ Rancid Tomatillos is a website that uses the fetch API to display details about 
 ## Preview
 ![ezgif com-video-to-gif (2)](https://github.com/alivaditis/rancid-tomatillos/assets/123565022/bc1572b9-f30d-48fe-ad11-491e43d9f70a)
 
-![Screen Shot 2023-07-15 at 11 41 43 AM](https://github.com/alivaditis/rancid-tomatillos/assets/123565022/c5771e18-adfd-4e92-a077-bb76eb3994b9)
-
 # Mobile View
+
+![Screen Shot 2023-07-15 at 11 41 43 AM](https://github.com/alivaditis/rancid-tomatillos/assets/123565022/c5771e18-adfd-4e92-a077-bb76eb3994b9)
 
 <img width="390" alt="Screen Shot 2023-07-16 at 12 31 35 PM" src="https://github.com/alivaditis/rancid-tomatillos/assets/123565022/a5aa0074-83f8-4036-9b6c-855ac07b6152">
 
