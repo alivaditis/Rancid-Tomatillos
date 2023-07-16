@@ -48,3 +48,4 @@ Rancid Tomatillos is a website that uses the fetch API to display details about 
 - HTML
 - Cypress
 - Fetch API
+- Vercel Deployment
