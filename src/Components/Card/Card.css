@@ -8,7 +8,6 @@
   height: 340px;
   display: flex;
   flex-direction: column;
-  font-family: Roboto, sans-serif;
 }
 
 .card:hover * {
@@ -36,11 +35,13 @@
 }
 
 .rating {
+  font-weight: bold;
   margin-top: 4px;
   display: flex;
 }
 
 .title {
   margin-top:6px;
+  font-weight: 400;
   align-self: flex-start;
 }
