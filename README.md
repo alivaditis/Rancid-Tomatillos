@@ -26,7 +26,7 @@ Rancid Tomatillos is a website that uses the fetch API to display details about 
 
 - Turing Front End, Mod 3 Weeks 1-2
   - Turing is a 7 month program, which offers a total of 4 modules.
-  - This project is used to practice the fundamentals React
+  - This project is used to practice the fundamentals of React
 
 
 ## Installation
