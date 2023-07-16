@@ -1,14 +1,6 @@
-# What's Cookin!
+# Rancid Tomatillos
 
 [Deployed Project](https://rancid-tomatillos-gules.vercel.app/) 
-
-## Table of Contents
-* [Description](#Description)
-* [Learning Goals](#Learning-Goals)
-* [Features](#Features)
-* [Installation](#Installation)
-* [Contributors](#Contributors)
-* [Technologies Used](#Technologies-Used)
 
 ## Description
 Rancid Tomatillos is a website that uses the fetch API to display details about a movie.  On the home page, there is a list of movies with their corresponding ratings.  A user can click on a movie to view more details of the movie, such as release date, genres, runtime, a trailer, and an overview.
